@@ -39,6 +39,15 @@ int main(int argc, char** argv) {
   fill(A, n * n);
   fill(B, n * n);
   fill(C, n * n);
+
+
+  for (int i=0; i<n; i++) {
+    for (int j=0; j<n; j++) {
+      printf("%f", A[i*n+j]);
+    }
+    printf("\n");
+  } 
+
     
   for (int i=0; i<n*n; i++)
     C1[i]=C[i];
