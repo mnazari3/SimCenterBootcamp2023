@@ -4,11 +4,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+
+using namespace std;
 
 int main(int argc, char **argv) {
 
   if (argc != 3) {
-    fprintf(stdout, "ERROR correct usage appName inputFile outputBinaryFile\n");
+    cerr << "ERROR correct usage appName inputFile outputBinaryFile\n";
     return -1;
   }
 
@@ -21,8 +24,8 @@ int main(int argc, char **argv) {
   int i = 0;
   float float1, float2;
   int maxVectorSize = 100;
-  double *vector1 = (double *)malloc(maxVectorSize*sizeof(double));
-  double *vector2 = (double *)malloc(maxVectorSize*sizeof(double));  
+  double *vector1 = new double [maxVectorSize];
+  double *vector2 = new double [maxVectorSize];  
   int vectorSize = 0;
   
   while (fscanf(filePtr,"%d, %f, %f\n", &i, &float1, &float2) != EOF) {
@@ -32,15 +35,15 @@ int main(int argc, char **argv) {
     vectorSize++;
 
     if (vectorSize == maxVectorSize) {
-      double *tmpVector1 = (double *)malloc(2*vectorSize*sizeof(double));
-      double *tmpVector2 = (double *)malloc(2*vectorSize*sizeof(double));
+      double *tmpVector1 = new double [2*vectorSize];
+      double *tmpVector2 = new double [2*vectorSize];
       for (int j=0; j<vectorSize; j++) { 
 	tmpVector1[j] = vector1[j];
 	tmpVector2[j] = vector2[j];
       }
 
-      free(vector1);
-      free(vector2);
+      delete(vector1);
+      delete(vector2);
 
       vector1 = tmpVector1;
       vector2 = tmpVector2;

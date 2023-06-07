@@ -34,6 +34,7 @@ int main(int argc, char **argv) {
     if (vectorSize == maxVectorSize) {
       double *tmpVector1 = (double *)malloc(2*vectorSize*sizeof(double));
       double *tmpVector2 = (double *)malloc(2*vectorSize*sizeof(double));
+
       for (int j=0; j<vectorSize; j++) { 
 	tmpVector1[j] = vector1[j];
 	tmpVector2[j] = vector2[j];
