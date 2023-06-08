@@ -6,15 +6,15 @@
 class Square: public ColoredShape {
  public:
   Square(double w, string color);
-  ~Square%();
+  ~Square();
   double getArea(void);
   void printArea(std::ostream &s);  
 
  protected:
 
  private:
-  double width, width;
-  static int numRect;
+  double width;
+  static int numSquare;
 };
 
 #endif // _SQUARE

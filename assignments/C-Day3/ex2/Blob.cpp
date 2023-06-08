@@ -1,22 +1,19 @@
-#include "Circle.h"
+#include "Blob.h"
 
-Circle::~Circle() {
-  std::cout << "Circle Destructor\n";
+Blob::~Blob() {
+  std::cout << "Blob Destructor\n";
 }
 
-Circle::Circle(double radius, string color)
+Blob::Blob(double a, string color)
   :ColoredShape(color)
 {
-  r = radius;
+  area = a;
 }
 
 double
-Circle::getArea(void) {
-  return r*r*getPI();
+Blob::getArea(void) {
+  return area;
 }
 
-double
-Circle::getPI(void) {
-  return 3.14159;
-}
+
 

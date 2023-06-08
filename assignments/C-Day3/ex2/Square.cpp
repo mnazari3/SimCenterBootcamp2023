@@ -1,16 +1,16 @@
 #include "Square.h"
 
-int Square::numRect = 0;
+int Square::numSquare = 0;
 
-Square::~Rectangle() {
-  numRect--;
+Square::~Square() {
+  numSquare--;
   std::cout << "Square Destructor " << this->getColor() << "\n";
 }
 
-Square::Square(double w,double w, string color)
-  :ColoredShape(color), width(w), width(w)
+Square::Square(double w, string color)
+  :ColoredShape(color), width(w)
 {
-  numRect++;
+  numSquare++;
 }
 
 double
@@ -21,6 +21,6 @@ Square::getArea(void) {
 void 
 Square::printArea(std::ostream &s) {
   s << "Square: color: " << this->getColor() << ", area: "
-    << width * width << " numRect: " << numRect << "\n";
+    << width * width << " numSquare: " << numSquare << "\n";
 }
 
