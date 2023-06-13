@@ -1,0 +1,65 @@
+1// program to solve quadratic equation
+2//        ax^2 + bx + c = 0
+3//
+4// soln: x = -b/2a +/- sqrt(b^2-4ac)/2a
+5//
+6// write a program to take 3 inputs and output the soln
+7// if two real solutions, printf("%.8f, %.8f\n", x1, x2);    
+8// if only one solution, just ouput a single value, i.e. printf("%.8f\n", x1);    
+9// if complex, output a complex number, i.e. printf("%.8f + %.8fi,%.8f - %.8fi\n", x1, im, x2,im);    
+10
+11#include <stdlib.h>
+12#include <stdio.h>
+13#include <math.h>
+14
+15int main(int argc, char **argv) {
+16
+  17  if (argc != 4) {
+  18    printf("Usage: appName a b c\n");
+  19    exit(-1);
+  20  }
+21
+  22  float a = atof(argv[1]);
+ 23  float b = atof(argv[2]);
+ 24  float c = atof(argv[3]);
+25
+  26  float x1 = 0, x2 = 0;
+27
+  28  printf("%.8f, %.8f\n", x1, x2);    
+29  
+  30  return 0;
+ 31}
+32
+
+// program to solve quadratic equation
+//        ax^2 + bx + c = 0
+//
+// soln: x = -b/2a +/- sqrt(b^2-4ac)/2a
+//
+// write a program to take 3 inputs and output the soln
+// if two real solutions, printf("%.8f, %.8f\n", x1, x2);    
+// if only one solution, just ouput a single value, i.e. printf("%.8f\n", x1);    
+// if complex, output a complex number, i.e. printf("%.8f + %.8fi,%.8f - %.8fi\n", x1, im, x2,im);    
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char **argv) {
+
+  if (argc != 4) {
+    printf("Usage: appName a b c\n");
+    exit(-1);
+  }
+  hi
+  float a = atof(argv[1]);
+  float b = atof(argv[2]);
+  float c = atof(argv[3]);
+
+  float x1 = 0, x2 = 0;
+
+  printf("%.8f, %.8f\n", x1, x2);    
+  
+  return 0;
+}
+
